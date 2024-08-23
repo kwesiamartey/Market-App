@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Trade Tower</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails</string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="logout">Logout</string>
+    <string name="search_hint">Search through store</string>
+    <string name="adAppId">ca-app-pub-5584388292077292~3408113657</string>
+    <string name="adUnitId">ca-app-pub-5103089487889811/4477611453</string>
+    <string name="adUnitId2">ca-app-pub-5103089487889811/8422699395</string>
+    <string name="adUnitId3">ca-app-pub-5103089487889811/3191673574</string>
+    <string name="how_to_stay_safe_in_string_app_name">How to Stay Safe in ${app_name}</string>
+
+</resources>

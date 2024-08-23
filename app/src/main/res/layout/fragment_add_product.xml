@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.Single_Selected_item_show">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/single_selected_toolnar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/bk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:drawableTint="@color/black"
+            android:drawableStart="@drawable/ic_baseline_close_24"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Product"
+            android:layout_marginStart="12dp"
+            android:textSize="18sp"
+            android:layout_weight = "1"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_bold"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="14dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Spinner
+                    android:id="@+id/edt_type_product"
+                    style="@style/spinnerTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:drawableStart="@drawable/ic_star"
+                    android:textColorHint="@color/textColor"
+                    android:textColor="@color/textColor"
+                    android:paddingBottom="3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/edt_pr_category"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_pr_prices_currency_wrapper" />
+
+                <LinearLayout
+                    android:id="@+id/single_item_Slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/platstation"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_marginBottom="14dp"
+                        android:text="Tap on Add photo and Select exactly six images. Select quality pictures to attract customers."
+                        android:textColor="@color/red"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/add_photo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/full_curved_corner_button_with_no_background_color"
+                            app:backgroundTint="@color/background_color"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="14dp"
+                            android:layout_marginBottom="12dp"
+                            android:text="Add photo"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_adds" />
+
+                        <LinearLayout
+                            android:id="@+id/add_image_twoo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginBottom="14dp"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:orientation="horizontal"
+                                android:layout_weight="1"
+                                android:weightSum="3">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+                                    <ImageView
+                                        android:id="@+id/upload_oneo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/placeholder"
+                                        android:scaleType="centerCrop" />
+
+                                </androidx.cardview.widget.CardView>
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+                                    <ImageView
+                                        android:id="@+id/upload_twoo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/placeholder"
+                                        android:scaleType="centerCrop" />
+
+                                </androidx.cardview.widget.CardView>
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/ic_adds"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+                                    <ImageView
+                                        android:id="@+id/upload_threeo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/placeholder"
+                                        android:scaleType="centerCrop" />
+
+                                </androidx.cardview.widget.CardView>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+                                    <ImageView
+                                        android:id="@+id/upload_tfouro"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/placeholder"
+                                        android:scaleType="centerCrop"/>
+
+                                </androidx.cardview.widget.CardView>
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+                                    <ImageView
+                                        android:id="@+id/upload_fiveo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/placeholder"
+                                        android:scaleType="centerCrop"/>
+
+                                </androidx.cardview.widget.CardView>
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+                                    <ImageView
+                                        android:id="@+id/upload_sixo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/placeholder"
+                                        android:scaleType="centerCrop"/>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/edt_pr_time_and_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/semi_curve_border"
+                            android:backgroundTint="@color/white"
+                            android:drawableStart="@drawable/ic_clock"
+                            android:drawablePadding="8dp"
+                            android:editable="false"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center_vertical"
+                            android:paddingEnd="8dp"
+                            android:text="Posted 2 hours"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pr_tp_wr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="4dp"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/single_item_Slider">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ProgressBar
+                            android:id="@+id/town_progrBar"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginEnd="6dp"/>
+
+                        <Spinner
+                            android:id="@+id/editLocationSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/semi_curve_border"
+                            android:drawableStart="@drawable/ic_star"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:paddingStart="1dp"
+                            android:paddingEnd="1dp"
+                            />
+
+                        <EditText
+                            android:id="@+id/edt_pr_enter_region_City"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/semi_curve_border"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center_vertical"
+                            android:paddingTop="12dp"
+                            android:paddingBottom="12dp"
+                            android:textColorHint="@color/textColor"
+                            android:textColor="@color/textColor"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:hint="Enter city or region"
+                            android:textSize="13sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/single_item_Slider" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/editLocationSpinnerText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/wp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="14dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/textView12"
+                    app:layout_constraintEnd_toStartOf="@+id/negotiate"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pr_tp_wr">
+
+                    <EditText
+                        android:id="@+id/edt_dt_pr_Title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/semi_curve_border"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="Title"
+                        android:padding="8dp"
+                        android:textColor="@color/textColor"
+                        android:textColorHint="#888"
+                        android:textCursorDrawable="@null"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/negotiate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Negotiable"
+                    android:backgroundTint="@color/red"
+                    android:textColor="@color/ColorGreen"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/wp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/wp"
+                    app:layout_constraintTop_toTopOf="@+id/wp" />
+
+
+
+                <LinearLayout
+                    android:id="@+id/edt_pr_prices_currency_wrapper"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12" >
+
+
+                    <Spinner
+                        android:id="@+id/currency"
+                        style="@style/spinnerTheme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:paddingTop="1dp"
+                        android:textColorHint="@color/textColor"
+                        android:textColor="@color/textColor"
+                        android:background="@drawable/semi_curve_border"
+                        android:drawableStart="@drawable/ic_star"
+                        android:paddingBottom="1dp"
+                        android:paddingStart="1dp"
+                        android:paddingEnd="1dp" />
+
+                    <EditText
+                        android:id="@+id/edt_pr_prices"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/semi_curve_border"
+                        android:inputType="numberDecimal"
+                        android:textCursorDrawable="@null"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="Price eg. 100 or 89"
+                        android:textColorHint="@color/textColor"
+                        android:textColor="@color/red"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/edt_pr_category"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:drawablePadding="6dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginEnd="0dp"
+                    android:textColorHint="@color/textColor"
+                    android:textColor="@color/textColor"
+                    app:layout_constraintEnd_toStartOf="@+id/edt_type_product"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_pr_prices_currency_wrapper" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Description Product"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="14dp"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/textColor"
+                    android:textColor="@color/textColor"
+                    android:textStyle="bold"
+                    android:paddingStart="8dp"
+                    android:fontFamily="@font/poppins_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editPhoneNumber" />
+
+                <TextView
+                    android:id="@+id/sgl_move_to_user_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginBottom="30dp"
+                    android:drawableEnd="@drawable/ic_arrow_forward"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/textView16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_pr_category" />
+
+                <EditText
+                    android:id="@+id/edt_sgl_description_product_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textCursorDrawable="@null"
+                    android:layout_marginBottom="18dp"
+                    android:background="@drawable/semi_curve_border"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_marginTop="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingEnd="8dp"
+                    android:inputType="textMultiLine"
+                    android:textColorHint="@color/textColor"
+                    android:textColor="@color/textColor"
+                    android:hint="Describe the items here"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+                <TextView
+                    android:id="@+id/edt_category_pr_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toStartOf="@+id/edt_type_product"
+                    app:layout_constraintHorizontal_bias="0.509"
+                    app:layout_constraintStart_toStartOf="@+id/edt_pr_category"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_pr_category" />
+
+                <TextView
+                    android:id="@+id/edt_type_pr_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@+id/edt_type_product"
+                    app:layout_constraintStart_toStartOf="@+id/edt_type_product"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_type_product" />
+
+
+                <EditText
+                    android:id="@+id/editPhoneNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="14dp"
+                    android:background="@drawable/semi_curve_border"
+                    android:hint="Enter valid phone number"
+                    android:inputType="number"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingStart="8dp"
+                    android:maxLength="20"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColorHint="@color/textColor"
+                    android:textColor="@color/textColor"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_category_pr_txt" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:textColor="@color/orange"
+                    android:textSize="11sp"
+                    android:paddingStart="8dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Input the price in numbers decimal only we will do the convention"
+                    app:layout_constraintBottom_toTopOf="@+id/edt_pr_prices_currency_wrapper"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/wp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:padding="8dp"
+                android:visibility="visible"
+                android:background="@drawable/semi_curve_border"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Promote your item"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginBottom="6dp"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Please, choose one of the following option to promote your item"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="12dp"
+                    android:textColor="@color/black"/>
+
+                <LinearLayout
+                    android:id="@+id/standard_ads"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:background="@drawable/selected_ads_background"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_medium"
+                        android:padding="12dp"
+                        android:text="Standard promotion"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:padding="12dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/textColor"
+                        android:layout_marginStart="12dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bronx_ads"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:gravity="bottom"
+                    android:background="@drawable/semi_curve_border"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bronx promotion"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/black"
+                            android:paddingStart="12dp"
+                            android:paddingTop="12dp"
+                            android:paddingEnd="12dp"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7 days"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/deep_grey"
+                            android:paddingStart="12dp"
+                            android:paddingBottom="12dp"
+                            android:paddingEnd="12dp"
+                            android:textSize="14sp"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/bronx_ads_currency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CHS"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="12dp"
+                        android:textSize="13sp"/>
+                    <TextView
+                        android:id="@+id/bronx_ads_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="13"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        android:textColor="@color/black"
+                        android:paddingEnd="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/silver_ads"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:gravity="bottom"
+                    android:background="@drawable/semi_curve_border"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="SILVER promotion"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/black"
+                            android:paddingStart="12dp"
+                            android:paddingTop="12dp"
+                            android:paddingEnd="12dp"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="15 days"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/deep_grey"
+                            android:paddingStart="12dp"
+                            android:paddingBottom="12dp"
+                            android:paddingEnd="12dp"
+                            android:textSize="14sp"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/silver_ads_currency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CHS"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        android:layout_marginBottom="12dp"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/silver_ads_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="60"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        android:textColor="@color/black"
+                        android:paddingEnd="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gold_ads"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:gravity="bottom"
+                    android:background="@drawable/semi_curve_border"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="GOLD promotion"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/black"
+                            android:paddingStart="12dp"
+                            android:paddingTop="12dp"
+                            android:paddingEnd="12dp"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1 month"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/deep_grey"
+                            android:paddingStart="12dp"
+                            android:paddingBottom="12dp"
+                            android:paddingEnd="12dp"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/gold_ads_currency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CHS"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        android:layout_marginBottom="12dp"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/gold_ads_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="150"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="12dp"
+                        android:paddingEnd="12dp"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <ProgressBar
+                    android:id="@+id/submit_progress"
+                    android:visibility="gone"
+                    android:background="@drawable/progress"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:textColorHint="@color/textColor"
+                android:textColor="@color/textColor"
+                android:fontFamily="@font/poppins_regular"
+                android:text="By clicking on Post, you accept the Terms and conditions, Confirm that you will abide by the safety Tips, and declare that this posting does not include and prohibited product or items."/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/updatePost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/full_curved_corner_button_with_no_background_color"
+                app:backgroundTint="@color/ColorGreen"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                android:text="Post"
+                android:layout_marginTop="14dp"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/currencyCategoryPrTxt"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

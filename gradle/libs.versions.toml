@@ -1,0 +1,106 @@
+[versions]
+agp = "8.5.0"
+kotlin = "1.9.0"
+coreKtx = "1.13.1"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+material = "1.12.0"
+activity = "1.9.1"
+constraintlayout = "2.1.4"
+lifecycle-ktx = "2.8.4"
+swiperefreshlayout = "1.1.0"
+test-core-ktx = "1.6.1"
+firebase-firestore-ktx = "25.0.0"
+lottie = "3.4.0"
+navigation = "2.7.7"
+preference-ktx = "1.2.1"
+viewbinding = "8.5.2"
+glide = "4.15.1"
+retrofit = "2.9.0"
+cardview = "1.0.0"
+design = "28.0.0"
+gson = "2.10.1"
+coroutines = "1.7.1"
+okhttp = "2.7.5"
+retrofit-old = "1.6.0"
+fragment-ktx = "1.8.2"
+lifecycle-extensions = "2.2.0"
+room = "2.6.1"
+ktor = "2.3.0"
+serialization = "1.6.0"
+shimmer = "0.5.0"
+coil = "1.2.1"
+ump = "2.0.0"
+logging-interceptor = "4.9.0"
+annotation = "1.8.2"
+work-runtime-ktx = "2.9.1"
+play-services-ads = "23.3.0"
+google-services = "4.4.2"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+converter-scalars = { module = "com.squareup.retrofit2:converter-scalars", version.ref = "retrofit" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle-ktx" }
+swiperefreshlayout = { group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version.ref = "swiperefreshlayout" }
+test-core-ktx = { group = "androidx.test", name = "core-ktx", version.ref = "test-core-ktx" }
+firebase-firestore-ktx = { group = "com.google.firebase", name = "firebase-firestore-ktx", version.ref = "firebase-firestore-ktx" }
+lottie = { group = "com.airbnb.android", name = "lottie", version.ref = "lottie" }
+navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation" }
+navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation" }
+preference-ktx = { group = "androidx.preference", name = "preference-ktx", version.ref = "preference-ktx" }
+viewbinding = { group = "com.android.databinding", name = "viewbinding", version.ref = "viewbinding" }
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+glide-compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" }
+retrofit-adapter-guava = { group = "com.squareup.retrofit2", name = "adapter-guava", version.ref = "retrofit" }
+retrofit-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+cardview = { group = "androidx.cardview", name = "cardview", version.ref = "cardview" }
+design = { group = "com.android.support", name = "design", version.ref = "design" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+okhttp = { group = "com.squareup.okhttp", name = "okhttp", version.ref = "okhttp" }
+okhttp-urlconnection = { group = "com.squareup.okhttp", name = "okhttp-urlconnection", version.ref = "okhttp" }
+retrofit-old = { group = "com.squareup.retrofit", name = "retrofit", version.ref = "retrofit-old" }
+fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragment-ktx" }
+lifecycle-extensions = { group = "androidx.lifecycle", name = "lifecycle-extensions", version.ref = "lifecycle-extensions" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+kotlin-reflect = { group = "org.jetbrains.kotlin", name = "kotlin-reflect", version.ref = "kotlin" }
+ktor-client-android = { group = "io.ktor", name = "ktor-client-android", version.ref = "ktor" }
+ktor-client-serialization = { group = "io.ktor", name = "ktor-client-serialization", version.ref = "ktor" }
+serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "serialization" }
+ktor-client-logging-jvm = { group = "io.ktor", name = "ktor-client-logging-jvm", version.ref = "ktor" }
+shimmer = { group = "com.facebook.shimmer", name = "shimmer", version.ref = "shimmer" }
+ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
+ktor-client-cio = { group = "io.ktor", name = "ktor-client-cio", version.ref = "ktor" }
+ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-serialization-gson = { group = "io.ktor", name = "ktor-serialization-gson", version.ref = "ktor" }
+ktor-client-json = { group = "io.ktor", name = "ktor-client-json", version.ref = "ktor" }
+kotlin-serialization = { group = "org.jetbrains.kotlin", name = "kotlin-serialization", version.ref = "serialization" }
+coil = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
+ump = { group = "com.google.android.ump", name = "user-messaging-platform", version.ref = "ump" }
+logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "logging-interceptor" }
+annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
+work-runtime-ktx = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "work-runtime-ktx" }
+play-core-ktx = { group = "com.google.android.play", name = "core-ktx", version = "1.8.1" }
+volley = { group = "com.android.volley", name = "volley", version = "1.2.1" }
+play-services-ads = { group = "com.google.android.gms", name = "play-services-ads", version = "23.3.0" }
+ktor-client-encoding = { group = "io.ktor", name = "ktor-client-encoding", version.ref = "ktor" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+google-services = { id = "com.google.gms.google-services", version.ref = "google-services" }

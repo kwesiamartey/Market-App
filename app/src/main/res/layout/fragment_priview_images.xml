@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.PriviewImagesFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/single_selected_toolnar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/bk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:drawableStart="@drawable/ic_baseline_close_24"
+            android:drawableTint="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_bold"
+            android:singleLine="true"
+            android:text="Image preview"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/priviewImagesRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"/>
+
+
+
+        <!--<LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:padding="12dp">
+
+                  <ImageView
+                      android:id="@+id/image_0"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:adjustViewBounds="true"
+                      android:layout_marginTop="6dp"
+                      android:scaleType="fitXY"
+                      android:layout_weight="1"/>
+
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:orientation="horizontal">
+
+                      <ImageView
+                          android:id="@+id/image_1"
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:layout_marginTop="6dp"
+                          android:adjustViewBounds="true"
+                          android:scaleType="fitXY"
+                          android:layout_marginRight="3dp"
+                          android:layout_weight="1"/>
+
+
+                      <ImageView
+                          android:id="@+id/image_2"
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:adjustViewBounds="true"
+                          android:layout_marginLeft="3dp"
+                          android:scaleType="fitXY"
+                          android:layout_marginTop="6dp"
+                          android:layout_weight="1"/>
+
+                  </LinearLayout>
+
+
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:orientation="horizontal">
+
+                      <ImageView
+                          android:id="@+id/image_3"
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:adjustViewBounds="true"
+                          android:layout_marginTop="6dp"
+                          android:scaleType="fitXY"
+                          android:layout_marginRight="3dp"
+                          android:layout_weight="1"/>
+
+
+                      <ImageView
+                          android:id="@+id/image_4"
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:adjustViewBounds="true"
+                          android:layout_marginTop="6dp"
+                          android:scaleType="fitXY"
+                          android:layout_marginLeft="3dp"
+                          android:layout_weight="1"/>
+
+                  </LinearLayout>
+
+                  <ImageView
+                      android:id="@+id/image_5"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:adjustViewBounds="true"
+                      android:scaleType="fitXY"
+                      android:layout_marginTop="6dp"
+                      android:layout_weight="1"/>
+
+              </LinearLayout>-->
+
+
+
+</LinearLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/lighter_grey"
+    android:padding="18dp"
+    tools:context=".ui.SignInFragment">
+
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Profile Update"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/update_my_detail_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/yellow"
+        android:paddingStart="12dp"
+        android:paddingTop="0dp"
+        android:fontFamily="@font/poppins_regular"
+        android:paddingEnd="12dp"
+        android:paddingBottom="0dp"
+        android:textColor="@color/white"
+        android:text="Update My Details"
+        android:gravity="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <Button
+        android:id="@+id/updateEmails_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/background_color"
+        android:gravity="center"
+        android:padding="12dp"
+        android:paddingStart="12dp"
+        android:fontFamily="@font/poppins_regular"
+        android:paddingTop="0dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="0dp"
+        android:text="Update Emails"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_my_detail_btn" />
+
+    <Button
+        android:id="@+id/updatePasswords_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/ColorGreen"
+        android:gravity="center"
+        android:padding="12dp"
+        android:paddingStart="12dp"
+        android:paddingTop="0dp"
+        android:fontFamily="@font/poppins_regular"
+        android:paddingEnd="12dp"
+        android:paddingBottom="0dp"
+        android:text="Update Password"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateEmails_btn" />
+
+    <Button
+        android:id="@+id/updateAvatar_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/teal_200"
+        android:gravity="center"
+        android:padding="12dp"
+        android:paddingStart="12dp"
+        android:paddingTop="0dp"
+        android:fontFamily="@font/poppins_regular"
+        android:paddingEnd="12dp"
+        android:paddingBottom="0dp"
+        android:text="Update Profile Picture"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updatePasswords_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

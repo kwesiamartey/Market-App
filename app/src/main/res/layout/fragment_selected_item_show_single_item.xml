@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.Single_Selected_item_show">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/single_selected_toolnar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/bk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:drawableStart="@drawable/ic_baseline_close_24"
+            android:drawableTint="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_bold"
+            android:singleLine="true"
+            android:text="Item"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end|center_vertical"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/share_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:drawableStart="@drawable/ic_baseline_share_24"
+                android:drawableTint="@color/deep_grey" />
+
+            <TextView
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:drawableStart="@drawable/ic_save"
+                android:drawableTint="@color/deep_grey" />
+
+            <TextView
+                android:id="@+id/flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:drawableStart="@drawable/ic_report" />
+
+            <TextView
+                android:id="@+id/btnEditPr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:drawableStart="@drawable/ic_edit"
+                android:drawableTint="#0FF1DC"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_grey"/>
+
+    <androidx.core.widget.NestedScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/single_page_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <fragment
+                android:id="@+id/CheckUserSignedOrSingedFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:name="com.lornamobileappsdev.my_marketplace.ui.CheckUserSignedOrSingedFragment"/>
+
+
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:name="com.lornamobileappsdev.my_marketplace.ui.ItemSelectClickedViewFlipperFragment"/>
+
+
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:name="com.lornamobileappsdev.my_marketplace.ui.ItemSelectedDetailsFragment"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/sgl_show_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center"
+                    android:background="@drawable/full_curved_corner_button_with_no_background_color"
+                    android:backgroundTint="@color/deep_mauve"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/sglShowContactText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColorHint="@color/white"
+                        android:drawableTint="@color/white"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textColor="@color/white"
+                        android:text="Show contact"
+                        android:layout_margin="12dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sgl_send_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center"
+                    android:background="@drawable/full_curved_corner_button_with_no_background_color"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColorHint="@color/white"
+                        android:drawableTint="@color/white"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textColor="@color/background_color"
+                        android:text="Comment on Item"
+                        android:layout_margin="12dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="12dp"
+                    android:text="About this item"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginBottom="1dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="12dp"
+                    android:text="item description from the seller"
+                    android:textColor="@color/deep_grey"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/sgl_description_product_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/semi_curve_border"
+                    android:backgroundTint="#eee"
+                    android:ellipsize = "end"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"
+                    android:padding="12dp"
+                    android:text=""
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/see_full_decription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="See full description"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/background_color"
+                    android:textSize="13sp"
+                    android:layout_marginRight="12dp"
+                    android:gravity="center|end"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:paddingLeft="6sp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="6dp"
+                    android:textSize="18sp"
+                    android:text="Send store a message"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:id="@+id/chatboxchat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/semi_curve_border"
+                    android:backgroundTint="#eee"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:visibility="visible">
+
+
+                    <EditText
+                        android:id="@+id/chat_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:background="@drawable/semi_curve_border"
+                        android:backgroundTint="#fafafa"
+                        android:layout_marginBottom="12dp"
+                        android:hint="Write message here..."
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/textColor"
+                        android:textColorHint="@color/textColor"
+                        android:paddingLeft="6sp"
+                        android:paddingTop="12dp"
+                        android:paddingRight="6dp"
+                        android:paddingBottom="12dp"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ProgressBar
+                            android:id="@+id/submitting_chat_progress"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:indeterminate="true"
+                            android:indeterminateTint="@android:color/black"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/submit_chat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp"
+                        android:gravity="center"
+                        android:background="@drawable/full_curved_corner_button_with_no_background_color"
+                        android:backgroundTint="@color/deep_mauve"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColorHint="@color/white"
+                            android:drawableTint="@color/white"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textColor="@color/white"
+                            android:text="Start Chat"
+                            android:layout_margin="12dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/feedWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:gravity="center_vertical|center"
+                        android:orientation="horizontal">
+
+                        <ProgressBar
+                            android:id="@+id/feedback_loading"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginEnd="4dp"
+                            android:indeterminate="true"
+                            android:indeterminateTint="@android:color/black"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/fdback_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textSize="18sp"
+                            android:text="Feedback"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/fdback_view_all"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textColor"
+                            android:text="view all"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/feedback_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none" />
+
+                </LinearLayout>
+
+                <fragment
+                    android:id="@+id/recentlyViewdfragment"
+                    android:name="com.lornamobileappsdev.my_marketplace.ui.InnerRecentlyViewdProducts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"/>
+
+                <fragment
+                    android:id="@+id/feedbackAndFeaturedProduct"
+                    android:name="com.lornamobileappsdev.my_marketplace.ui.FeedbackAndFeaturedProductFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/share_this_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/full_curved_corner_button_with_no_background_color"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Share this item"
+                        android:fontFamily="@font/poppins_regular"
+                        android:padding="14dp"
+                        android:textColor="@color/purple_200"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/report_this_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/full_curved_corner_button_with_no_background_color"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Report this item"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:padding="14dp"
+                        android:textColor="@color/purple_200"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adViewppp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                ads:adSize="SMART_BANNER"
+                android:visibility="visible"
+                ads:adUnitId="@string/adUnitId3">
+            </com.google.android.gms.ads.AdView>
+
+            <fragment
+                android:id="@+id/productUiList"
+                android:name="com.lornamobileappsdev.my_marketplace.ui.MainItemListFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottom_app_bar"
+            style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            app:fabCradleMargin="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetEnd="0dp"
+            app:fabCradleRoundedCornerRadius="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <com.google.android.gms.ads.AdView
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/adViewpp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    ads:adSize="SMART_BANNER"
+                    android:visibility="visible"
+                    ads:adUnitId="@string/adUnitId2">
+                </com.google.android.gms.ads.AdView>
+
+
+            </LinearLayout>
+
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>

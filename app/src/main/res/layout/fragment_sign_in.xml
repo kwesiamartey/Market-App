@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.SignInFragment">
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+
+           android:gravity="center"
+           android:padding="20dp"
+           android:background="@drawable/marketplace_bg"
+           android:layout_weight="1">
+
+           <TextView
+               android:id="@+id/icBack"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center_vertical"
+               android:text=" Back"
+               android:elevation="1dp"
+               android:fontFamily="@font/poppins_regular"
+               android:textColor="@color/white"
+               android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+               android:drawableTint="@color/white"/>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical"
+               android:gravity="center"
+               android:layout_weight="1">
+
+      <!--         <com.airbnb.lottie.LottieAnimationView
+                   android:id="@+id/lottie"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   app:lottie_autoPlay="true"
+                   android:layout_weight="1"
+                   app:lottie_loop="true"
+                   app:lottie_rawRes="@raw/signin_login_anim"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintVertical_bias="0.274" />-->
+
+              <ImageView
+                   android:id="@+id/imageView2"
+                   android:layout_width="100dp"
+                   android:layout_height="100dp"
+                   android:layout_marginBottom="10dp"
+                   android:src="@drawable/ic_launcher"/>
+               <!-- <TextView
+                   android:id="@+id/textView2"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Hello"
+                   android:textColor="@color/white"
+                   android:elevation="10dp"
+                   android:textSize="24sp"
+                   android:fontFamily="@font/poppins_bold"
+                   android:textStyle="bold"/>-->
+
+               <TextView
+                   android:id="@+id/textView3"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Sign in "
+                   android:textColor="@color/white"
+                   android:elevation="10dp"
+                   android:textSize="24sp"
+                   android:fontFamily="@font/poppins_extrabold"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+           </LinearLayout>
+
+       </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_weight="1">
+
+        <EditText
+            android:id="@+id/sgn_email_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:padding="10dp"
+            android:elevation="1dp"
+            android:textSize="13sp"
+            android:textCursorDrawable="@null"
+            android:hint="email"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/textColor"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:drawablePadding="12dp"
+            android:background="@drawable/full_curved_corner_button"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <LinearLayout
+            android:id="@+id/sgn_password_txt_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/full_curved_corner_button"
+            android:elevation="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sgn_email_txt" >
+
+            <EditText
+                android:id="@+id/sgn_password_txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_baseline_security_24"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
+                android:backgroundTint="@color/lighter_grey"
+                android:textCursorDrawable="@null"
+                android:layout_weight="1"
+                android:minHeight="38dp"
+                android:textSize="13sp"
+                android:drawablePadding="12dp"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:hint="password"/>
+
+            <TextView
+                android:id="@+id/s_eye"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginRight="12dp"
+                android:text="Show"
+                android:textColor="@color/deep_grey"
+                android:drawablePadding="12dp"
+                android:drawableEnd="@drawable/ic_baseline_remove_red_eye_24"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/forgotPassword"
+            android:layout_width="match_parent"
+            android:gravity="end"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Forgot your password"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sgn_password_txt_wrapper" />
+
+        <TextView
+            android:id="@+id/btn_signin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/full_curved_corner_button"
+            android:backgroundTint="@color/background_color"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:textSize="16sp"
+            android:paddingBottom="12dp"
+            android:layout_marginBottom="12dp"
+            android:text="SIGN IN"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Don't have an account? "
+                android:textColor="@color/textColor"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/create"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="Create one"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                app:layout_constraintStart_toEndOf="@+id/textView5"
+                app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:visibility="gone"
+                android:background="@drawable/progress"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

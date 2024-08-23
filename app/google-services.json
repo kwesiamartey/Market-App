@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "882676358622",
+    "project_id": "tradetower-83d4c",
+    "storage_bucket": "tradetower-83d4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882676358622:android:677e9ec9f4260846a5114f",
+        "android_client_info": {
+          "package_name": "com.lornamobileappsdev.my_marketplace"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA237zUYfW15_Y0sCAGujEKF5Jd00FTKuY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

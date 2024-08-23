@@ -1,0 +1,96 @@
+ // Get the bitmap from assets and display into image view
+    val bitmap = assetsToBitmap("tulip.jpg")
+    // If bitmap is not null
+    bitmap?.let {
+        image_view_bitmap.setImageBitmap(bitmap)
+    }
+
+
+    val imagePath = "C:\\base64\\image.png"
+
+    // Encode File/Image to Base64
+    val base64ImageString = encoder(imagePath)
+    println("Base64ImageString = $base64ImageString")
+
+    // Decoder Base4 to File/Image
+    decoder(base64ImageString, "C:\\base64\\decoderImage.png")
+
+    // Click listener for button widget
+    button.setOnClickListener{
+        if(bitmap!=null){
+            // Save the bitmap to a file and display it into image view
+            val uri = bitmapToFile(bitmap)
+            image_view_file.setImageURI(uri)
+
+            // Show a toast message
+            toast("Bitmap saved in a file.")
+        }else{
+            toast("bitmap not found.")
+        }
+    }
+}
+
+
+// Method to get a bitmap from assets
+private fun assetsToBitmap(fileName:String):Bitmap?{
+    return try{
+        val stream = assets.open(fileName)
+        BitmapFactory.decodeStream(stream)
+    }catch (e:IOException){
+        e.printStackTrace()
+        null
+    }
+}
+
+
+// Method to save an bitmap to a file
+private fun bitmapToFile(bitmap:Bitmap): Uri {
+    // Get the context wrapper
+    val wrapper = ContextWrapper(applicationContext)
+
+    // Initialize a new file instance to save bitmap object
+    var file = wrapper.getDir("Images",Context.MODE_PRIVATE)
+    file = File(file,"${UUID.randomUUID()}.jpg")
+
+    try{
+        // Compress the bitmap and save in jpg format
+        val stream:OutputStream = FileOutputStream(file)
+        bitmap.compress(Bitmap.CompressFormat.JPEG,100,stream)
+        stream.flush()
+        stream.close()
+    }catch (e:IOException){
+        e.printStackTrace()
+    }
+
+    // Return the saved bitmap uri
+    return Uri.parse(file.absolutePath)
+}
+
+// Method to get Base64 from bitmap
+private fun imageFileToBase64(imageFile: File): String {
+
+ return FileInputStream(imageFile).use { inputStream ->
+    ByteArrayOutputStream().use { outputStream ->
+        Base64OutputStream(outputStream, Base64.DEFAULT).use { base64FilterStream ->
+            inputStream.copyTo(base64FilterStream)
+            base64FilterStream.flush()
+            outputStream.toString()
+          }
+       }
+   }
+}
+
+
+// Encode File/Image to Base64
+private fun encoder(filePath: String): String{
+ val bytes = File(filePath).readBytes()
+ val base64 = Base64.getEncoder().encodeToString(bytes)
+return base64
+}
+
+
+// Decode Base64 to File/Image
+private fun decoder(base64Str: String, pathFile: String): Unit{
+  val imageByteArray = Base64.getDecoder().decode(base64Str)
+  File(pathFile).writeBytes(imageByteArray)
+}

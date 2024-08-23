@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/full_curved_corner_button"
+        android:layout_margin="6dp">
+        <ProgressBar
+            android:id="@+id/submittingrrrprogress"
+            android:visibility="gone"
+            android:layout_width="25dp"
+            android:indeterminate="true"
+            android:layout_marginStart="10dp"
+            android:indeterminateTint="@android:color/black"
+            android:layout_marginRight="12sp"
+            android:layout_height="25dp"/>
+
+        <EditText
+            android:id="@+id/comment_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/lighter_grey"
+            android:drawablePadding="6dp"
+            android:layout_weight="1"
+            android:textCursorDrawable="@null"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Write something here"
+            android:padding="10dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/textColor"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+        <TextView
+            android:id="@+id/attach_afile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_attach_file_24"
+            android:drawablePadding="12dp"/>
+        <TextView
+            android:id="@+id/send_a_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_send"
+            android:drawableTint="@color/deep_mauve"
+            android:drawablePadding="12dp"/>
+    </LinearLayout>
+
+</LinearLayout>

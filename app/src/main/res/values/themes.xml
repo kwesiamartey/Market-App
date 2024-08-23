@@ -1,0 +1,145 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Yupee" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+
+        <item name="colorPrimary">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/black</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" >@color/white</item>
+        <!--remove highlight from editText -->
+        <item name="android:autofilledHighlight">@android:color/transparent</item>
+        <!--change the action textColors -->
+        <item name="actionBarTheme">@style/ThemeOverlay.Actionbar</item>
+        <!-- Customize your theme here. -->
+        <!--remove shadow under actionbar-->
+        <item name="theme">@style/Widget.AppTheme.ActionBar</item>
+
+        <item name="android:windowBackground">@drawable/startup_screen</item>
+
+    </style>
+
+    <style name="ThemeOverlay.Actionbar" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" >
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:titleTextAppearance">@font/poppins_regular</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="android:autofilledHighlight">@android:color/transparent</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/white</item>
+        <item name="android:windowBackground">@drawable/startup_screen</item>
+
+        <!-- Primary brand color. -->
+
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/black</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <!--change the action textColors -->
+        <item name="actionBarTheme">@style/ThemeOverlay.Actionbar</item>
+        <!-- Customize your theme here. -->
+        <!--remove shadow under actionbar-->
+        <item name="theme">@style/Widget.AppTheme.ActionBar</item>
+    </style>
+
+    <style name="Widget.AppTheme.ActionBar" parent="Widget.AppCompat.ActionBar.Solid">
+        <!-- action bar background - without android prefix -->
+        <item name="background">@color/purple_200</item>
+        <!-- action bar elevation - without android prefix -->
+        <item name="elevation">0dp</item>
+        <item name="android:autofilledHighlight">@android:color/transparent</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/white</item>
+        <item name="android:windowBackground">@drawable/startup_screen</item>
+
+        <!-- Primary brand color. -->
+
+        <item name="colorPrimary">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/black</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <!--change the action textColors -->
+        <item name="actionBarTheme">@style/ThemeOverlay.Actionbar</item>
+        <!-- Customize your theme here. -->
+        <!--remove shadow under actionbar-->
+        <item name="theme">@style/Widget.AppTheme.ActionBar</item>
+    </style>
+
+    <style name="spinnerTheme" parent="@android:style/Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="hintTextColor">@color/light_grey</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:autofilledHighlight">@android:color/transparent</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/white</item>
+        <item name="android:windowBackground">@drawable/startup_screen</item>
+
+        <!-- Primary brand color. -->
+
+        <item name="colorPrimary">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/black</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!--change the action textColors -->
+        <item name="actionBarTheme">@style/ThemeOverlay.Actionbar</item>
+        <!-- Customize your theme here. -->
+        <!--remove shadow under actionbar-->
+        <item name="theme">@style/Widget.AppTheme.ActionBar</item>
+
+    </style>
+
+    <style name="Theme.Yupee.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Yupee.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Start Up Screen -->
+    <style name="AppThemeLauncher" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+
+        <!-- Primary brand color. -->
+
+        <item name="colorPrimary">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/black</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <!--remove highlight from editText -->
+        <item name="android:autofilledHighlight">@android:color/transparent</item>
+        <!--change the action textColors -->
+        <item name="actionBarTheme">@style/ThemeOverlay.Actionbar</item>
+        <!-- Customize your theme here. -->
+        <!--remove shadow under actionbar-->
+        <item name="theme">@style/Widget.AppTheme.ActionBar</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/background_color</item>
+        <item name="android:windowBackground">@drawable/startup_screen</item>
+
+    </style>
+
+</resources>

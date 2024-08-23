@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" android:maxSdkVersion="29" />
+    <!-- Required only if your app needs to access images or photos that other apps created. -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.Ad_ID" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Yupee"
+        tools:targetApi="31"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Prompt Google Play services to install the backported photo picker module -->
+        <service android:name="com.google.android.gms.metadata.ModuleDependencies"
+            android:enabled="false"
+            android:exported="false"
+            tools:ignore="MissingClass">
+            <intent-filter>
+                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
+            </intent-filter>
+
+            <meta-data android:name="photopicker_activity:0:required" android:value="" />
+        </service>
+
+        <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/adAppId" />
+
+
+        <activity
+            android:name="com.lornamobileappsdev.my_marketplace.ui.PostAProductFragment"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.lornamobileappsdev.my_marketplace.ui.AboutUsFragment"
+            android:label="About us"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.lornamobileappsdev.my_marketplace.ui.UpdatePasswordFragment"
+            android:label="Chat"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.lornamobileappsdev.my_marketplace.ui.SearchProductionFragment"
+            android:label="Search Product"
+            android:theme="@style/Theme.Yupee"
+
+            android:windowSoftInputMode="adjustPan" />
+        <!--<activity
+            android:name=".ui.AllProductFragment"
+            android:label="All Product"
+            android:windowSoftInputMode="adjustPan" />-->
+        <activity
+            android:name="com.lornamobileappsdev.my_marketplace.ui.VerifyEmailAdressFragment"
+            android:label="Verify"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <!--<activity
+            android:name="com.lornamobileappsdev.my_marketplace.ui.DashboardFragment"
+            android:label="Lovic Marketplace"
+            android:windowSoftInputMode="adjustPan" />-->
+        <activity
+            android:name="com.lornamobileappsdev.my_marketplace.ui.MySavedProducts"
+            android:label="Saved Items"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.lornamobileappsdev.my_marketplace.ui.SuccessFullPageFragment"
+            android:label="Successful"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.lornamobileappsdev.my_marketplace.ui.UpdateAvatarFragment"
+            android:label="Change Avatar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.lornamobileappsdev.my_marketplace.ui.UpdateEmailFragment"
+            android:label="Update Email"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.lornamobileappsdev.my_marketplace.ui.ListOfCountrieFragment"
+            android:label="Countries"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.lornamobileappsdev.my_marketplace.ui.SettingsFragment"
+            android:label="Settings"
+            android:windowSoftInputMode="adjustPan" />
+        <!--<activity
+            android:name=".ui.EditaProductFragment"
+            android:label="Edit Product"
+            android:windowSoftInputMode="adjustPan" />-->
+        <!--<activity
+            android:name=".ui.Single_Selected_item_show"
+            android:label="TradeTower"
+            android:windowSoftInputMode="adjustPan" />-->
+        <!--<activity
+            android:name=".ui.FeaturedSliderFragment"
+            android:label="Featured Slider"
+            android:windowSoftInputMode="adjustPan" />-->
+        <activity
+            android:name="com.lornamobileappsdev.my_marketplace.ui.ProfileUpdateFragment"
+            android:label="Profile Update"
+            android:windowSoftInputMode="adjustPan" />
+        <!--<activity
+            android:name=".ui.FeedbackAndFeaturedProductFragment"
+            android:label="Feedback and Featured"
+            android:windowSoftInputMode="adjustPan" />-->
+        <!--<activity
+            android:name=".ui.ProductListUi"
+            android:label="TradeTower"
+            android:windowSoftInputMode="adjustPan" />-->
+        <activity
+            android:name="com.lornamobileappsdev.my_marketplace.ui.LoginFragment"
+            android:label="TradeTower" />
+        <activity
+            android:name="com.lornamobileappsdev.my_marketplace.ui.ForgotPasswordFragment"
+            android:label="TradeTower"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.lornamobileappsdev.my_marketplace.ui.SignUpFragment"
+            android:label="TradeTower"
+            android:windowSoftInputMode="adjustPan" />
+        <!--<activity
+            android:name=".ui.SelectProductUserProfileAvatarFragment"
+            android:label="TradeTower"
+            android:windowSoftInputMode="adjustPan" />-->
+        <activity
+            android:name="com.lornamobileappsdev.my_marketplace.ui.MessagesFragment"
+            android:label="TradeTower"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name="com.lornamobileappsdev.my_marketplace.ui.SignInFragment"
+            android:label="TradeTower"
+            android:windowSoftInputMode="adjustPan" />
+    </application>
+
+</manifest>

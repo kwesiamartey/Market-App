@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/marketplace_bg"
+    android:orientation="vertical"
+    tools:context=".ui.SignInFragment">
+
+    <TextView
+        android:id="@+id/ic_bback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:drawableStart="@drawable/ic_baseline_arrow_back_24"
+        android:drawableTint="@color/lighter_grey"
+        android:drawablePadding="12sp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center_vertical"
+        android:textColor="@color/lighter_grey"
+        android:elevation="1dp"
+        android:text="Back"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SignUp"
+            android:fontFamily="@font/poppins_extrabold"
+            android:textColor="@color/white"
+            android:textSize="24sp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingBottom="20dp"
+        android:paddingEnd="20dp"
+        android:layout_gravity="center"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/semi_curve_border"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="New Account"
+                android:gravity="center"
+                android:elevation="1dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="1dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/sgnFullnameTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textCursorDrawable="@null"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="6dp"
+                android:singleLine="true"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
+                android:background="@drawable/full_curved_corner_button"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:drawablePadding="12dp"
+                android:elevation="1dp"
+                android:hint="Full name"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:textSize="13sp" />
+            <LinearLayout
+                android:id="@+id/password_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/full_curved_corner_button"
+                android:elevation="1dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/lighter_grey"
+                    android:drawableLeft="@drawable/ic_baseline_security_24"
+
+                    android:drawablePadding="12dp"
+                    android:hint="password"
+                    android:inputType="textPassword"
+                    android:minHeight="38dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"
+                    android:textCursorDrawable="@null"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/p_eye"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12dp"
+                    android:drawableEnd="@drawable/ic_baseline_remove_red_eye_24"
+                    android:drawablePadding="12dp"
+                    android:gravity="center"
+                    android:text="Show"
+                    android:textColor="@color/deep_grey" />
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/sgnupEmailTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textCursorDrawable="@null"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="12dp"
+                android:singleLine="true"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/full_curved_corner_button"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="12dp"
+                android:elevation="1dp"
+                android:hint="Valid Email"
+                android:padding="10dp"
+                android:textSize="13sp"/>
+
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/mobile_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="6dp"
+                    android:singleLine="true"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"
+                    android:textCursorDrawable="@null"
+                    android:background="@drawable/full_curved_corner_button"
+                    android:drawableLeft="@drawable/ic_baseline_local_phone_24"
+                    android:drawablePadding="12dp"
+                    android:elevation="1dp"
+                    android:hint="Phone no."
+                    android:padding="10dp"
+                    android:textSize="13sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="1dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:background="@drawable/full_curved_corner_button"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="6dp">
+                    <ProgressBar
+                        android:id="@+id/town_progrBar"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginEnd="6dp"/>
+
+                    <Spinner
+                        android:id="@+id/country"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textCursorDrawable="@null"
+                        android:elevation="1dp"
+                        android:hint="Country"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:textSize="13sp"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/signDescriptionTxt"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/let_us_know_about_curved_corner_button"
+                android:ems="10"
+                android:elevation="1dp"
+                android:textCursorDrawable="@null"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
+                android:gravity="start|top"
+                android:hint="Let us know about your store / self"
+                android:inputType="textMultiLine"
+                android:maxLength="300"
+                android:padding="18dp"
+                android:textSize="13sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="6dp"
+                android:gravity="center_horizontal|end"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"
+                    android:text="Already have an account? " />
+
+                <TextView
+                    android:id="@+id/txt_sign_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="SIGN IN"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"
+                android:textSize="12sp"
+                android:text="By clicking sign Up, you agreee tou our Terms of Service and that you have read our Privacy Policy"/>
+
+            <TextView
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/full_curved_corner_button"
+                android:backgroundTint="@color/background_color"
+                android:drawableTint="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:text="SIGN UP"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sgn_country_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/background_color"
+                tools:layout_editor_absoluteX="206dp"
+                tools:layout_editor_absoluteY="581dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ProgressBar
+                    android:id="@+id/progressBarSignup"
+                    android:background="@drawable/progress"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/editLocationSpinnerText"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

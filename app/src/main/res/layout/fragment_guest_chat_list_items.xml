@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txt_guest_chat_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/poppins_regular"
+        android:background="@drawable/curved_corner_button"
+        android:backgroundTint="#fff"
+        android:textColor="@color/textColor"
+        android:paddingTop="6dp"
+        android:elevation="1dp"
+        android:paddingBottom="6dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:gravity="start"
+        android:text="Let discuss it and land on final agreement"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/guest_txt_chat_time_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:drawableEnd="@drawable/ic_check"
+        android:drawablePadding="4dp"
+        android:text="12/10/22 03:54"
+        android:textColor="@color/deep_grey"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/txt_guest_chat_wrapper"
+        app:layout_constraintTop_toBottomOf="@+id/txt_guest_chat_wrapper" />
+
+    <TextView
+        android:id="@+id/guest_txt_chat_time_checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:drawableEnd="@drawable/ic_checked"
+        android:drawablePadding="4dp"
+        android:text="12/10/22 03:54"
+        android:textColor="@color/textColor"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/txt_guest_chat_wrapper"
+        app:layout_constraintTop_toBottomOf="@+id/guest_txt_chat_time_check" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/inner_recent_viewed_wrapper"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:visibility="gone"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/move_to_recently_viewed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Recently Viewed Items"
+        android:drawableTint="@color/black"
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        android:layout_marginBottom="12dp"
+        android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/inner_recent_viewed_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white" />
+
+</LinearLayout>

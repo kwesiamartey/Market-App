@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:padding="12dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/big_star"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="Thanks for sharing!"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:paddingLeft="14sp"
+        android:paddingRight="14dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="18dp"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:paddingLeft="14sp"
+        android:paddingRight="14dp"
+        android:text="Your feedback helps others make better decisions about which item or product to buy"
+        android:textColor="@color/textColor"
+        android:textSize="13sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="6dp"
+        android:gravity="center"
+        android:paddingBottom="6dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/continue_ratings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Done!"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/ColorGreen"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginEnd="8dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/fr_images_wrapper"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ft_product_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/oswald"
+        android:text="TMA-2HD Wireless"
+        android:textColor="@color/black"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fr_images_wrapper" />
+
+    <TextView
+        android:id="@+id/ft_product_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/poppins_medium"
+        android:maxLines="2"
+        android:text="We live in an era where everyone has a busy schedule and has no time for everything. It would be great to find a place where they get everything and not switch from one place to another. We do have such a platform, and with mobile app development, it is more efficient. Mobile apps like multi-vendor marketplace apps are very beneficial for working people, and app like Amazon have proven that and enlightened people with their services."
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/smlar_location" />
+
+    <TextView
+        android:id="@+id/ft_product_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/oswald"
+        android:text="12000"
+        android:textColor="@color/orange"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ft_product_title" />
+
+    <TextView
+        android:id="@+id/smlar_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/poppins_medium"
+        android:drawableStart="@drawable/ic_location"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:gravity="start|center_vertical"
+        android:text="Location"
+        android:paddingStart="-4dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ft_product_price" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
